@@ -1,7 +1,68 @@
+# Environment files and local secrets
 .env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python
 __pycache__/
 *.py[cod]
+*$py.class
+*.pyd
+*.so
+
+# Virtual environments
 venv/
-.venv*/
+.venv/
+.venv-*/
+env/
+ENV/
+
+# Django and local databases
 db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+media/
+staticfiles/
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# Type checkers and linters
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Generated API/schema/build artifacts
 schema.yml
+openapi.yml
+dist/
+build/
+*.egg-info/
+
+# Local Docker overrides
+docker-compose.override.yml
+docker-compose.local.yml
